@@ -16,7 +16,7 @@ This is for internal team use, there is no authentication and little attribution
 Feel free to submit PR's but I am not supporting this per say if you have issues running it, you will need some knowledge of PHP.
 
 # Credits  
-Enchanced with AI (as i'm bad at coding)
+Enchanced with AI (as i'm bad at coding)  
 CSS provided by Sakura
 
 # Use at your own risk.  
