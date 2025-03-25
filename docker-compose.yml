@@ -1,0 +1,34 @@
+services:
+  #webserver
+  webservices:
+    container_name: "webserver"
+    image: "webdevops/php-apache:8.2"
+    restart: "unless-stopped"
+    ports:
+      - "80:80"
+    volumes:
+      - "./lockers/website:/app"
+    depends_on:
+      - "mariadb"
+  #mariadb
+  mariadb:
+    container_name: "mariadb"
+    image: "mariadb:lts"
+    restart: "unless-stopped"
+    volumes:
+      - ./lockers/db:/var/lib/mysql
+      - ./lockers/db-conf:/etc/mysql/conf.d
+    environment:
+      -  MARIADB_ROOT_PASSWORD=<SECURE PASSWORD> #CHANGE ME
+
+  #phpmyadmin
+  phpmyadmin:
+    container_name: "phpmyadmin"
+    image: "phpmyadmin"
+    restart: "unless-stopped"
+    ports:
+      - "8080:80"
+    depends_on:
+      - "mariadb"
+    environment:
+      -  "PMA_HOST=mariadb"
