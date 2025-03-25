@@ -10,7 +10,7 @@ A simple badly written website for tracking lockers.
 6. go to the server IP.
 
 # Limitations  
-This is for internal team use, there is no authentication and little attribution on an entry change, this was by design.
+This is for internal team use, there is no authentication and little attribution on an entry change, this was by design to be ran in an offline environment e.g. forensics labs.
 
 # Support  
 Feel free to submit PR's but I am not supporting this per say if you have issues running it, you will need some knowledge of PHP.
