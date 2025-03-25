@@ -5,7 +5,9 @@ A simple badly written website for tracking lockers.
 1. Install Docker
 2. modify the docker-compose to fit your needs
 3. docker compose up -d
-4. go to the server IP.
+4. Go to phpmyadmin and import DB lockers.sql
+5. update config.php with your DB details
+6. go to the server IP.
 
 # Limitations  
 This is for internal team use, there is no authentication and little attribution on an entry change, this was by design.
